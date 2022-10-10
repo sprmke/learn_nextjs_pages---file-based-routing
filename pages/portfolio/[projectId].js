@@ -1,7 +1,10 @@
-import React from 'react';
+import { useRouter } from 'next/router';
 
 const PortfolioProjectPage = () => {
-  return <div>PortfolioProjectPage</div>;
+  const router = useRouter();
+  const { projectId } = router.query;
+
+  return <div>Project - {projectId}</div>;
 };
 
 export default PortfolioProjectPage;
